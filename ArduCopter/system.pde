@@ -413,7 +413,8 @@ static bool set_mode(uint8_t mode)
             if ((GPS_ok() && g.command_total > 1) || ignore_checks) {
                 success = true;
                 // roll-pitch, throttle and yaw modes will all be set by the first nav command
-                init_commands();            // clear the command queues. will be reloaded when "run_autopilot" calls "update_commands" function
+                // current waypoint reinitialized when motors are armed
+				
             }
             break;
 
