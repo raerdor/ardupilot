@@ -58,6 +58,7 @@ static void arm_motors_check()
             pre_arm_checks(true);
             if(ap.pre_arm_check && arm_checks(true)) {
                 init_arm_motors();
+				init_commands();     // GFM: added to nav cmd reset on arming as this was removed from set_mode
             }else{
                 // reset arming counter if pre-arm checks fail
                 arming_counter = 0;
