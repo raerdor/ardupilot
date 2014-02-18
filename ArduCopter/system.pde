@@ -414,7 +414,7 @@ static bool set_mode(uint8_t mode)
                 success = true;
                 // roll-pitch, throttle and yaw modes will all be set by the first nav command
                 // current waypoint reinitialized when motors are armed
-				
+                do_nav_wp(); // "autofix" :: resume navigated move, initialize modes and controls to AUTO 
             }
             break;
 
